@@ -13,4 +13,5 @@ c) 0(n)
 
 ## Exercise II
 
-
+Binary Search Tree
+0(logn)
