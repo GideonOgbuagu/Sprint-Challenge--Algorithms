@@ -17,4 +17,4 @@ def count_th(word):
             return count_th(word[1:])
 
     # pass
-count_th("theme")
+count_th("abcthefthghith")

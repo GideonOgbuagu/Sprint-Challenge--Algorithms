@@ -97,9 +97,35 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+
+        # TO-DO: swap
+        # Your code here
+        self.set_light_on()
+        self.swap_item()
+        while self.light_is_on():
+            while self.move_right():
+                if self.compare_item() > 0:
+                    self.swap_item()
+            if self.compare_item() is None and self.can_move_right() is False:
+                self.swap_item()
+                self.set_light_off()
+                break
+            else:
+                while self.move_left():
+                    if self.compare_item() is None:
+                        self.swap_item()
+                        self.move_right()
+                        self.swap_item()
+                        break
 
 
+        
+
+        return self._list
+        # pass
+
+# place the item in that position
+ # move right and swap
 if __name__ == "__main__":
     # Test our your implementation from the command line
     # with `python robot_sort.py`
